@@ -10,6 +10,7 @@ Install from PyPi
 ```
 pip install wavefront_dispatch
 ```
+More package [details](https://pypi.org/project/wavefront-dispatch/) on PyPi.
 
 ## Required Secrets
 
