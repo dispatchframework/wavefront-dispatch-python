@@ -13,7 +13,7 @@ pip install wavefront_dispatch
 
 ## Required Secrets
 
-* wavefront_sever_url = https://\<INSTANCE>.wavefront.com
+* wavefront_sever_url = https://<INSTANCE>.wavefront.com
 * wavefront_auth_token = Wavefront API token with Direct Data Ingestion permission
 
 These secrets must be present in Dispatch functions' secrets of context.
