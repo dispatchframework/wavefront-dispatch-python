@@ -27,7 +27,7 @@ Decorate Dispatch handler function with @wavefront_dispatch.wrapper.
 import wavefront_dispatch
 
 @wavefront_dispatch.wrapper
-def handler(ctx, payload):
+def handle(ctx, payload):
     # codes
 
 ```
@@ -46,4 +46,25 @@ Following metrics will be reported by wrapper:
 ## Custom Dispatch Function Metrics
 Custom metrics powered by [pyformance plugin](https://github.com/wavefrontHQ/python-client/tree/master/wavefront_pyformance).
 
-Please refer to [example](https://github.com/dispatchframework/wavefront-dispatch-python/blob/master/example.py).
+Please refer to following [example](https://github.com/dispatchframework/wavefront-dispatch-python/blob/master/example.py):
+
+```Python
+import wavefront_dispatch
+import random
+
+@wavefront_dispatch.wrapper
+def handle(ctx, payload):
+
+    # Customized metrics
+    registry = wavefront_dispatch.get_registry()
+
+    # Report Gauge
+    gauge_val = registry.gauge("dispatch.function.wf.testgauge")
+    gauge_val.set_value(200)
+
+    # Report Counter
+    counter = registry.counter("dispatch.function.wf.testcounter")
+    counter.inc()
+
+    ...
+```
