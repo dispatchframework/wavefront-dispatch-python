@@ -36,11 +36,11 @@ And add `wavefront_dispatch` package as runtime dependency druing Dispatch pytho
 ## Standard Metrics reported by Wavefront Dispatch wrapper
 
 Following metrics will be reported by wrapper:
-|Metric Name                             |Type           |Description                                       |
-|----------------------------------------|---------------|--------------------------------------------------|
-|dispatch.function.wf.invocations.count  |Delta Counter  |Count of Dispatch function invocations            |
-|dispatch.function.wf.errors.count       |Delta Counter  |Count of Dispatch function executions with error  |
-|dispatch.function.wf.duration.value     |Gauge          |Execution time of Dispatch function in ms.        |
+| Metric Name | Type | Description |
+|---|---|---|
+| dispatch.function.wf.invocations.count | Delta Counter | Count of Dispatch function invocations. |
+| dispatch.function.wf.errors.count | Delta Counter | Count of Dispatch function executions with error. |
+| dispatch.function.wf.duration.value | Gauge | Execution time of Dispatch function in ms. |
 
 
 ## Custom Dispatch Function Metrics
